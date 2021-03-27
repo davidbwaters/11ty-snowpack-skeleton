@@ -1,0 +1,6 @@
+//
+// main
+//
+
+console.log('♥️')
+
