@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
     ...formats.assets
   ])
 
-  eleventyConfig.addPassthroughCopy('assets')
+  // eleventyConfig.addPassthroughCopy('assets')
 
   return config
 }
