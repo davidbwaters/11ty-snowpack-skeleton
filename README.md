@@ -1,24 +1,36 @@
-# New Project
+# 11ty snowpack skeleton
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+clean barebones snowpack 11ty base with a workaround for those who couldn't get hmr working with snowpack's 11ty starter.
 
-## Available Scripts
+## amazing non-features
 
-### npm start
+- doesn't assume you (want to) use postcss or tailwind or webpack
+- basic minification for inline page-specific/critical css
+- external global/app css file and example template css for shared styles
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+> ✨ bootstrapped with create snowpack app (csa) and modded (see above).
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## credits
 
-### npm run build
+i gutted the basic structer or more complex starters and others (11st was useful) and only left in 
+or added parts useful for a modular structure.
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+## scripts
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
+### yarn start
 
-### Q: What about Eject?
+runs the app in the development mode.
+open http://localhost:8080 to view it in the browser.
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+the page will reload if you make edits.
+
+### yarn build
+
+builds a static copy of your site to the `dist/` folder.
+11ty's html is outputted to `/build`, but i couldn't get 
+snowpack's hmr to work when sharing an output folder, so 
+this is mounted with snowpack.
+
+tl;dr you can ignore `/build` for now and i'll try to update with a non-hacky solution
+
+your app is ready to be deployed!
