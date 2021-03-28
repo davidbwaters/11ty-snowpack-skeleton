@@ -3,6 +3,7 @@ module.exports = {
     build: { url: '/', static: true },
     scripts: { url: '/scripts' },
     stylesheets: { url: '/stylesheets' },
+    assets: { url: '/' }
   },
   plugins: [
     [
