@@ -1,3 +1,4 @@
+const CleanCSS = require("clean-css")
 
 const config = {
   dir: {
@@ -35,7 +36,9 @@ module.exports = function (eleventyConfig) {
     ...formats.assets
   ])
 
-  // eleventyConfig.addPassthroughCopy('assets')
+  .addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles
+  })
 
   return config
 }
