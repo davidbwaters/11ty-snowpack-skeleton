@@ -36,7 +36,7 @@ module.exports = function (eleventyConfig) {
     ...formats.assets
   ])
 
-  .addFilter("cssmin", function(code) {
+  eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles
   })
 
